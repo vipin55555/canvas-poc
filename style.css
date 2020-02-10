@@ -1,0 +1,33 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: darkgray;
+    color: white;
+    min-height: 100vh;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-align-center-justify-space-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#myCanvas,
+#myCanvas2 {
+    border-radius: 5px;
+}
+
+#myCanvas {
+    background-color: lightcyan;
+}
+
+#myCanvas2 {
+    background-color: lightgreen;
+}
