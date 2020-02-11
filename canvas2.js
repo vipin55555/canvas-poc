@@ -16,7 +16,6 @@ this.moveCircle();
 
 
 /*
-
 - here requestAnimationFrame with callback is used for animation 
 */
 function moveCircle() {
@@ -40,8 +39,7 @@ function moveCircle() {
 
 
     requestAnimationFrame(moveCircle);
-
-    //
+    
 }
 
 /*

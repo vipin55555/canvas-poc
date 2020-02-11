@@ -121,10 +121,3 @@ function createPaths() {
 
 
 }
-
-/*
-
-*/
-function createDot(){
-
-}
