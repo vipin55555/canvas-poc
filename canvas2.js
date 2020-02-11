@@ -1,13 +1,13 @@
 const myCanvas2 = document.getElementById('myCanvas2');
 const myContext2 = myCanvas2.getContext('2d');
 
-myCanvas2.width = 500;
+myCanvas2.width = 370;
 myCanvas2.height = 500;
 
 const circle = {
     x: 200,
     y: 200,
-    size: 30,
+    size: 25,
     dx: 4,
     dy: 3,
 };

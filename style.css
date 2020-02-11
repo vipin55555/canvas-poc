@@ -2,7 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: darkgray;
     color: white;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .width-100 {
@@ -13,15 +13,11 @@ body {
     text-align: center;
 }
 
-.flex-align-center-justify-space-around {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
 #myCanvas,
-#myCanvas2 {
+#myCanvas2,
+#myCanvas3 {
     border-radius: 5px;
+    margin: 0px 12px;
 }
 
 #myCanvas {
@@ -30,4 +26,12 @@ body {
 
 #myCanvas2 {
     background-color: lightgreen;
+}
+
+#myCanvas3 {
+    background-color: lightcoral;
+}
+
+#characterImage{
+    display: none;
 }
