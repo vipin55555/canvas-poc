@@ -1,12 +1,8 @@
 const myCanvas = document.getElementById('myCanvas');
-const myCanvas2  = document.getElementById('myCanvas2');
 const myContext = myCanvas.getContext('2d');
 
 myCanvas.width = 500;
 myCanvas.height = 500;
-myCanvas2.width = 500;
-myCanvas2.height = 500;
-
 
 this.createRectangles();
 this.createTexts();
