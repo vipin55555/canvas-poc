@@ -29,7 +29,12 @@ const character =
 
 this.moveCharacter()
 
+/*
+- Initialze the character position to default and Move the character
+  continously based on key event with the help of requestAnimationFrame function with callback
+*/
 function moveCharacter() {    
+    // clear canvas continuosly in order to get updated character
     myContext3.clearRect(0,0,myCanvas3.width,myCanvas3.height);
 
     this.drawCharacter();
@@ -42,25 +47,39 @@ function moveCharacter() {
     requestAnimationFrame(moveCharacter);
 }
 
+/*
+- Detect the walls and move it inside the canvas if character is moving outside of the canvas
+*/
 function detectWalls() {
+    // if character horizontal postion is at 0 then set it zero
     if (character.x < 0) {
         character.x = 0;
     }
+    // if character horizontal postion along with its width is greater than 
+    // canvas width then set it's postion by substracting character width by canvas width
     if (character.x + character.width > myCanvas3.width) {
         character.x = myCanvas3.width - character.width;
     }
+    // if character vertical postion is at 0 then set it zero
     if (character.y < 0) {
         character.y = 0;
     }
+    // if character vertical postion along with its height is greater than
+    // canvas height then set it's postion by substracting character height by canvas height
     if (character.y + character.height > myCanvas3.height) {
         character.y = myCanvas3.height - character.height;
     }
 }
 
+/*
+- Draw Image with the help of:
+- drawImage(imageObject,x-axis,y-axis,width,height);
+*/
 function drawCharacter() {
     myContext3.drawImage(characterImage, character.x, character.y, character.width, character.height); 
 }
 
+// change the postion for every arrow key down event
 function myKeyDown(event) {
     
     switch (event.key) {
@@ -85,6 +104,7 @@ function myKeyDown(event) {
     }
 }
 
+// on all arrow key up event, reset the value to default
 function myKeyUp(event){
     if (
         event.key === keyboardKeys.left || 
@@ -100,6 +120,9 @@ function myKeyUp(event){
     }
 }
 
+/*
+- Move the postions based on the arrow key
+*/
 function movePosition(position){    
     switch (position) {
         case keyboardKeys.left:
